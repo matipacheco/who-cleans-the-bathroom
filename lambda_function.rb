@@ -9,3 +9,5 @@ def lambda_handler(event:, context:)
     ((today - start_date).to_i % 2) == 0 ? 'EVEN' : 'ODD'
   )
 end
+
+# lambda_handler

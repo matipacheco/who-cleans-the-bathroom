@@ -1,8 +1,5 @@
 source "https://rubygems.org"
 
-ruby '2.5.1'
+ruby '2.5.0'
 
-gem 'pry'
-# gem 'sqlite3'
 gem 'twilio-ruby'
-# gem 'aws-sdk-s3', '~> 1'
