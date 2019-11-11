@@ -1,8 +1,4 @@
-load_paths = Dir['./vendor/bundle/ruby/2.5.0/gems/**/lib/']
-$LOAD_PATH.unshift(*load_paths)
-
 require 'twilio-ruby'
-
 
 class TwilioClient
   def self.notify(receiver)
@@ -21,3 +17,4 @@ class TwilioClient
     end
   end
 end
+

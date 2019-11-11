@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'who-cleans-the-bathroom
+
+  Sample SAM Template for who-cleans-the-bathroom
+
+  '
+Globals:
+  Function:
+    Timeout: 3
+Resources:
+  WhoCleansTheBathroomFunction:
+    Properties:
+      CodeUri: s3://who-cleans-the-bathroom/a16fa5352f29ba7339589bebc1769d84
+      Events:
+        WhoCleansTheBathroom:
+          Properties:
+            Method: get
+            Path: /notify
+          Type: Api
+      Handler: app.lambda_handler
+      Runtime: ruby2.5
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31

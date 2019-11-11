@@ -1,5 +1,5 @@
 require 'date'
-require_relative 'lib/twilio_client'
+require_relative 'twilio_client'
 
 def lambda_handler(event:, context:)
   today       = Date.today
