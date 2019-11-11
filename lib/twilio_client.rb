@@ -1,4 +1,8 @@
-require_relative '../vendor/bundle/ruby/2.5.0/gems/twilio-ruby-5.29.0/lib/twilio-ruby'
+load_paths = Dir['./vendor/bundle/ruby/2.5.0/gems/**/lib/']
+$LOAD_PATH.unshift(*load_paths)
+
+require 'twilio-ruby'
+
 
 class TwilioClient
   def self.notify(receiver)
