@@ -3,16 +3,14 @@
 
 ## Setup
 
-* Ruby version:
+* Node version:
 
-        2.5.1
+        v10.15.3
 
 * System dependencies:
         
-        bundle install --path vendor/bundle
+        npm install
 
-the `--path vendor/bundle` it's really important, since we force to install the system dependencies directly in the project folder. This way, we can easily make a bundle when we upload the function to AWS Lambda.
-
- * Creating the zip file
+ * Creating the zip file that's uploaded to AWS Lambdag
  
-        zip who-cleans-the-bathroom.zip lambda_function.rb lib/ vendor/
+        zip -r function.zip index.js node_modules/ package-lock.json package.json
